@@ -1,6 +1,6 @@
 package com.datio.examples
 
-import com.datio.examples.basics.PairOdd
+import com.datio.exercises.PairOdd
 import org.scalatest.{Matchers, WordSpec}
 
 class PairOddTest extends WordSpec with Matchers{

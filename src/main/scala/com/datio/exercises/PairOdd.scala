@@ -1,4 +1,4 @@
-package com.datio.examples.basics
+package com.datio.exercises
 
 trait PairOdd {
   def isPair(x: Int): Boolean = x % 2 == 0
