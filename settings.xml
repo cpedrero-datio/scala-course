@@ -10,7 +10,7 @@
         <servers/>
         <profiles>
                 <profile>
-                        <id>nexus</id>
+                        <id>general</id>
                         <activation>
                                 <activeByDefault>true</activeByDefault>
                         </activation>
