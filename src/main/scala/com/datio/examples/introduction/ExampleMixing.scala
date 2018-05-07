@@ -7,7 +7,7 @@ object ExampleMixing {
   }
 
   class ChildClass extends AbstractClass {
-    val message = "I'm an instance of class B"
+    val message = "I'm an instance of class ChildClass"
   }
 
   trait ExampleTrait extends AbstractClass {
@@ -16,11 +16,10 @@ object ExampleMixing {
 
   class GrandSonClass extends ChildClass with ExampleTrait
 
-  object Example1 extends App {
-    override def main(args: Array[String]): Unit = {
-      val d = new GrandSonClass
-      println(d.message) // I'm an instance of class B
-      println(d.upperMessage) // I'M AN INSTANCE OF CLASS B
-    }
+  def main(args: Array[String]): Unit = {
+    val d = new GrandSonClass
+    println(d.message) // I'm an instance of class ChildClass
+    println(d.upperMessage) // I'M AN INSTANCE OF CLASS CHILDCLASS
   }
+
 }

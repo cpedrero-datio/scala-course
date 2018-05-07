@@ -8,17 +8,13 @@ import scala.collection.mutable.ListBuffer
 class CollectionsTest extends WordSpec with Matchers{
 
   "Map Example" should  {
-    val map = Map("a" -> 1, "b" -> 2, "c" -> 3, "d" -> 4, "e" -> 5)
-
-    "MkString function" in{
-      map.mkString("") shouldEqual "abcde"
-    }
 
     "transform values" in{
-      map.map{
+      val map = Map("a" -> 1, "b" -> 2, "c" -> 3, "d" -> 4, "e" -> 5)
+      val newMap = map.map{
         case (key, value) => (key, value+1)
       }
-      map shouldEqual Map("a" -> 2, "b" -> 3, "c" -> 4, "d" -> 5, "e" -> 6)
+      newMap shouldEqual Map("a" -> 2, "b" -> 3, "c" -> 4, "d" -> 5, "e" -> 6)
     }
 
     "flatten, reverse, filter key, values" in{
@@ -38,9 +34,14 @@ class CollectionsTest extends WordSpec with Matchers{
   "List Example" should  {
     val list: immutable.Seq[Any] = 1 :: "Hi" :: 2 :: "Bye" :: Nil
 
+    "MkString function" in{
+      list.mkString("") shouldEqual "1Hi2Bye"
+    }
+
     "zipWithIndex" in{
       list.filter(_.isInstanceOf[String]).zipWithIndex shouldEqual List(("Hi", 0), ("Bye", 1))
     }
+
   }
 
 
