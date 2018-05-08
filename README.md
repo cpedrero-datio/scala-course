@@ -3,7 +3,7 @@
 
 
 **1.- Clone repository:**
-<br/>git clone https://github.com/cpedrero/scala-course.git
+<br/>git clone https://github.com/cpedrero/scala-course.git<br/>
 **2.- cd scala-course**<br/>
 **3.- mvn -U dependency:resolve**<br/>
 **4.- Import project (maven) from existing sources in Intellij**<br/>
